@@ -31,6 +31,8 @@ printHello:
 printPhrase:
     move    phrase
     call    strPrintLn
+    mov     eax, "World!"
+    call    strPrintLn
     ret
 
 printSum:
