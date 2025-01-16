@@ -32,7 +32,7 @@ printPhrase:
     move    phrase
     call    strPrintLn
     mov     eax, "World!"
-    call    strPrintLn
+    call    strPrintLn 
     ret
 
 printMult:
