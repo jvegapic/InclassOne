@@ -20,7 +20,9 @@ printNum1:
     ret
 
 printHello:
-    mov     eax, hello
+    mov     eax, "he"
+    call    strPrint
+    mov     eax, "llo"
     call    strPrintLn
     ret
 
