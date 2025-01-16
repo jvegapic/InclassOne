@@ -21,8 +21,10 @@ printNum1:
     call    intPrintLn
     ret
 
-printGoodBye:
-    mov     eax, goodbye
+printHello:
+    mov     eax, "he"
+    call    strPrint
+    mov     eax, "llo"
     call    strPrintLn
     ret
 
