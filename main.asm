@@ -3,7 +3,7 @@
 SECTION .data:
 num1:   db  10
 num2:   db  20
-hello:  db "goodbye", 0h
+goodbye:  db "goodbye", 0h
 
 SECTION .text:
 global _start
@@ -20,7 +20,7 @@ printNum1:
     ret
 
 printGoodBye:
-    mov     eax, hello
+    mov     eax, goodbye
     call    strPrintLn
     ret
 
