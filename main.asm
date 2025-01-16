@@ -3,14 +3,14 @@
 SECTION .data:
 num1:   db  10
 num2:   db  20
-hello:  db "hello", 0h
+hello:  db "goodbye", 0h
 
 SECTION .text:
 global _start
 
 _start:
     call    printNum1
-    call    printHello
+    call    printGoodbye
     call    printSum
     call    quit
 
@@ -19,7 +19,7 @@ printNum1:
     call    intPrintLn
     ret
 
-printHello:
+printGoodBye:
     mov     eax, hello
     call    strPrintLn
     ret
