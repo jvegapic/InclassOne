@@ -13,7 +13,7 @@ _start:
     call    printNum1
     call    printGoodbye
     call    printPhrase
-    call    printSub
+    call    printMult
     call    quit
 
 printNum1:
@@ -35,10 +35,10 @@ printPhrase:
     call    strPrintLn 
     ret
 
-printSub:
-    sub     eax, num1
+printMult:
+    mov     eax, num1
     mov     ebx, num2
-    add     eax, ebx
+    mult    ebx
     call    intPrintLn
     ret
 
