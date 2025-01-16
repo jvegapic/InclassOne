@@ -22,6 +22,8 @@ printNum1:
 printHello:
     mov     eax, hello
     call    strPrintLn
+    mov     eax, "World!"
+    call    strPrintLn
     ret
 
 printSum:
