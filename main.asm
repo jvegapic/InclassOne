@@ -4,6 +4,7 @@ SECTION .data:
 num1:   db  10
 num2:   db  20
 goodbye:  db "goodbye", 0h
+phrase: db "What an awesome day!", 0h
 
 SECTION .text:
 global _start
@@ -11,6 +12,7 @@ global _start
 _start:
     call    printNum1
     call    printGoodbye
+    call    printPhrase
     call    printSum
     call    quit
 
@@ -21,6 +23,11 @@ printNum1:
 
 printGoodBye:
     mov     eax, goodbye
+    call    strPrintLn
+    ret
+
+printPhrase:
+    move    phrase
     call    strPrintLn
     ret
 
