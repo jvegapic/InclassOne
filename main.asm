@@ -13,7 +13,7 @@ _start:
     call    printNum1
     call    printGoodbye
     call    printPhrase
-    call    printSum
+    call    printSub
     call    quit
 
 printNum1:
@@ -32,11 +32,11 @@ printPhrase:
     move    phrase
     call    strPrintLn
     mov     eax, "World!"
-    call    strPrintLn
+    call    strPrintLn 
     ret
 
-printSum:
-    mov     eax, num1
+printSub:
+    sub     eax, num1
     mov     ebx, num2
     add     eax, ebx
     call    intPrintLn
